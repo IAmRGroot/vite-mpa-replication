@@ -25,7 +25,7 @@ export default (): UserConfigExport => {
             },
         }),
         del({
-            targets: 'out/*',
+            targets: 'src/out/*',
             hook: 'buildEnd',
         }),
         copy({
