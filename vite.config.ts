@@ -9,21 +9,6 @@ import del from 'rollup-plugin-delete';
 export default (): UserConfigExport => {
     const plugins = [
         vue2(),
-        VitePWA({
-            manifest: {
-                start_url: '/',
-                scope: '/',
-                name: 'Test',
-                short_name: 'Test',
-                description: 'Test',
-                icons: [{
-                    src: '/logo.png',
-                    sizes: '200x200',
-                    type: 'image/png',
-                    purpose: 'any',
-                }],
-            },
-        }),
         del({
             targets: 'src/out/*',
             hook: 'buildEnd',
@@ -38,6 +23,21 @@ export default (): UserConfigExport => {
             overwrite: true,
             hook: 'writeBundle',
             preserveTimestamps: true,
+        }),
+        VitePWA({
+            manifest: {
+                start_url: '/',
+                scope: '/',
+                name: 'Test',
+                short_name: 'Test',
+                description: 'Test',
+                icons: [{
+                    src: '/logo.png',
+                    sizes: '200x200',
+                    type: 'image/png',
+                    purpose: 'any',
+                }],
+            },
         }),
     ];
 
