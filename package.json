@@ -1,0 +1,25 @@
+{
+    "name": "test",
+    "version": "1.0.0",
+    "scripts": {
+      "build": "vite build"
+    },
+    "dependencies": {
+      "vue": "^2.6.14"
+    },
+    "devDependencies": {
+      "@vue/compiler-sfc": "^3.2.26",
+      "@vue/runtime-dom": "^3.2.26",
+      "eslint-plugin-vue": "^8.2.0",
+      "rollup-plugin-copy": "^3.4.0",
+      "rollup-plugin-delete": "^2.0.0",
+      "rollup-plugin-gzip": "^3.0.0",
+      "typescript": "^4.5.4",
+      "unplugin-vue-components": "^0.17.9",
+      "unplugin-vue2-script-setup": "^0.8.3",
+      "vite": "^2.7.4",
+      "vite-plugin-pwa": "^0.11.12",
+      "vite-plugin-vue2": "^1.9.0"
+    }
+  }
+  
