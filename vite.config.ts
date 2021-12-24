@@ -1,4 +1,4 @@
-import { defineConfig, UserConfigExport } from 'vite';
+import { defineConfig, Plugin, UserConfigExport } from 'vite';
 import { createVuePlugin as vue2 } from 'vite-plugin-vue2';
 import { VitePWA } from 'vite-plugin-pwa';
 import copy from 'rollup-plugin-copy';
@@ -41,7 +41,7 @@ export default (): UserConfigExport => {
                preserveTimestamps: true,
            }),
           enforce: 'post'
-        },
+        } as Plugin,
     ];
 
     return defineConfig({
