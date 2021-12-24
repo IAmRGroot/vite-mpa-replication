@@ -2,8 +2,6 @@ import { defineConfig, UserConfigExport } from 'vite';
 import { createVuePlugin as vue2 } from 'vite-plugin-vue2';
 import { VitePWA } from 'vite-plugin-pwa';
 import copy from 'rollup-plugin-copy';
-import compression from 'rollup-plugin-gzip';
-import { brotliCompressSync } from 'zlib';
 import del from 'rollup-plugin-delete';
 
 
@@ -25,10 +23,6 @@ export default (): UserConfigExport => {
                     purpose: 'any',
                 }],
             },
-        }),
-        compression({
-            customCompression: content => brotliCompressSync(Buffer.from(content)),
-            fileName: '.br',
         }),
         del({
             targets: 'out/*',
