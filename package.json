@@ -2,8 +2,8 @@
     "name": "test",
     "version": "1.0.0",
     "scripts": {
-        "vite": "vite",
-        "build": "vite build && esno deploy.ts"
+        "vite": "vite --debug --force",
+        "build": "vite build --debug && esno deploy.ts"
     },
     "dependencies": {
         "vue": "^2.6.14"
