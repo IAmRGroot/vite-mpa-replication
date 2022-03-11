@@ -12,7 +12,7 @@ export default (): UserConfigExport => {
         rollupOptions: {
             input: [
                 resolve(__dirname, './index.html'),
-                resolve(__dirname, './test1.html'),
+                resolve(__dirname, './test1/index.html'),
             ],
         },
     } as BuildOptions;
